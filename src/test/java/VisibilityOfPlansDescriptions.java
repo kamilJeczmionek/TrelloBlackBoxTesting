@@ -9,7 +9,7 @@ public class VisibilityOfPlansDescriptions {
     @BeforeTest
     public WebDriver Setup() {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        WebDriver  driver = new ChromeDriver();
         return driver;
     }
     @Test
@@ -19,6 +19,6 @@ public class VisibilityOfPlansDescriptions {
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//*[@id=\"BXP-APP\"]/header[1]/div/div[1]/div[1]/button[3]")).click();
         driver.findElement(By.xpath("//*[@id=\"BXP-APP\"]/header[1]/div/div[2]/div/div[3]/div/div[1]/div/nav/a[1]")).click();
-        //driver.quit();
+        driver.quit();
     }
 }
